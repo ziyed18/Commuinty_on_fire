@@ -13,7 +13,12 @@
         <h1>Community on Fire Library</h1>
 
     <nav>
-        <ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
             <li><a href="html/Home.html" target="a">Home</a></li>
             <li><a href="html/Preparatory.html" target="a">Preparatory</a></li>
             <li><a href="html/Secondary.html" target="a">Secondary</a></li>
@@ -31,6 +36,16 @@
     <footer>
         <p class="copyright">&copy; 2026 Community on Fire Library. All rights reserved.</p>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
