@@ -263,6 +263,7 @@ section{
     .hamburger {
         display: flex;
     }
+    
     #nav-menu {
         display: none;
         flex-direction: column;
