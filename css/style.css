@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+header{
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    background-image: url(/img/logo_commuinty.png);
+    text-align: center;
+    width: 100%;
+    height:20%;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    background-color: rgba(10, 9, 9, 0.719);
+    text-align: center;
+    width: 100%;
+    height:8%;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+.flag{
+    width: 120px;
+    height: 72px;
+    position: absolute;
+    left: 30px;
+    top: 13px;
+    animation: burn 1s infinite alternate;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+@keyframes burn {
+    0% {
+        filter: brightness(1) drop-shadow(0 0 5px rgba(255, 69, 0, 0.5));
+    }
+    100% {
+        filter: brightness(1.3) drop-shadow(0 0 15px rgba(255, 140, 0, 0.8));
+    }
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin: 0;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+main{
+    left: 0%;
+    position: absolute;
+    top:20%;
+    width: 100%; 
+    height: 72%;
+    background: transparent;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: fit-content;
+   
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+a{
+    text-decoration: none;
+    background: transparent;
+    color: #ecf0f1;
+    margin: 0;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a:hover{
+    background: #ecf0f1;
+    color: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+iframe{
+    width:100%;
+    height: 100%;
+    border: none;
+}
+
+section{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+/* Home page styles */
+.hero {
+    
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url(/img/Tunisia-Flag.jpg);
+    background-size: cover;
+    background-position: center;
+
+    
+    color: white;
+    border-radius: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.hero p {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.card h3 {
+    color: #e74c3c;
+    margin-top: 0;
+}
+.card p {
+    margin-bottom: 15px;
+}
+.card a {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.card a:hover {
+    background: #2980b9;
+}
+
+/* Baccalaureate page styles */
+.subject {
+    margin: 30px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.subject h3 {
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+.subject a {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.subject a:hover {
+    background: #2980b9;
+}
+
+/* Footer styles */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        height: 20%;
+    }
+    main {
+        top: 20%;
+        height: 80%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    nav {
+        padding: 10px;
+    }
+    ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    a {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+    .flag {
+        width: 80px;
+        height: 48px;
+        left: 10px;
+        top: 10px;
+    }
+    section {
+        width: 100%;
+    }
+    /* Home responsive */
+    .hero {
+        padding: 30px 15px;
+    }
+    .hero h2 {
+        font-size: 2.5em;
+    }
+    .content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .card {
+        padding: 15px;
+    }
+    /* Baccalaureate responsive */
+    body {
+        padding: 10px;
+    }
+    .subject {
+        margin: 20px 0;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 1em;
+    }
+}
