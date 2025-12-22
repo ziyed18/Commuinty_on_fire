@@ -9,7 +9,7 @@ body {
 
 header{
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    background-image: url(/img/logo_commuinty.png);
+    background-image: url(img/logo_commuinty.png);
     text-align: center;
     width: 100%;
     height:20%;
@@ -140,7 +140,7 @@ section{
     
     text-align: center;
     padding: 50px 20px;
-    background-image: url(/img/Tunisia-Flag.jpg);
+    background-image: url(img/Tunisia-Flag.jpg);
     background-size: cover;
     background-position: center;
 
