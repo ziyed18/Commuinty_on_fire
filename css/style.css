@@ -170,6 +170,7 @@ nav{
     flex-direction: column;
     cursor: pointer;
     padding: 5px;
+    
 }
 
 .hamburger span {
@@ -186,6 +187,7 @@ nav{
 
 .hamburger.active span:nth-child(2) {
     opacity: 0;
+
 }
 
 .hamburger.active span:nth-child(3) {
@@ -397,8 +399,8 @@ section{
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(26, 37, 47, 0.95);
-        padding: 15px;
+        background: rgba(0, 0, 0, 0.584);
+        padding: 10px;
         border-radius: 0 0 10px 10px;
         gap: 15px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.3);
