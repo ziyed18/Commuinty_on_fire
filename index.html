@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,12 +33,18 @@
     </script>
 </head>
 <body>
-    <header>
-<img class="flag" src="img/Tunisia-Flag.jpg" alt="Tunis">
-
-        <h1>Community On Fire Library</h1>
-
-    <nav>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-left">
+                <img class="flag" src="img/tn.png" alt="Tunis">
+                <img class="logo" src="img/logo_commuinty.png" alt="Community on Fire Logo">
+            </div>
+            <h1>Community On Fire Library</h1>
+            <div class="header-right">
+                <img class="flag" src="img/Tunisia-Flag.jpg" alt="Tunis">
+            </div>
+        </div>
+        <nav>
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -59,10 +65,6 @@
          <iframe src="html/Home.html" frameborder="0" name="a" scrolling="auto"></iframe>
         </section>
     </main>
-    <footer>
-        <p class="copyright">&copy; 2026 Community on Fire Library. All rights reserved.</p>
-    </footer>
-
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
