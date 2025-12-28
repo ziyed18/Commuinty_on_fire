@@ -50,23 +50,52 @@
             <span></span>
         </div>
         <ul id="nav-menu">
-            <li><a href="html/Home.html" target="a">Home</a></li>
-            <li><a href="html/Preparatory.html" target="a">Preparatory</a></li>
-            <li><a href="html/Secondary.html" target="a">Secondary</a></li>
-            <li><a href="html/Baccalaureate.html" target="a">Baccalaureate</a></li>
-            <li><a href="html/University.html" target="a">University</a></li>
-            <li><a href="html/About_Us.html" target="a">About Us</a></li>
+            <li><a href="#" onclick="loadPage('html/Home.html')">Home</a></li>
+            <li><a href="#" onclick="loadPage('html/Preparatory.html')">Preparatory</a></li>
+            <li><a href="#" onclick="loadPage('html/Secondary.html')">Secondary</a></li>
+            <li><a href="#" onclick="loadPage('html/Baccalaureate.html')">Baccalaureate</a></li>
+            <li><a href="#" onclick="loadPage('html/University.html')">University</a></li>
+            <li><a href="#" onclick="loadPage('html/About_Us.html')">About Us</a></li>
         </ul> 
     </nav>
     </header>
     <main>
         <section>
-         <iframe src="html/Home.html" frameborder="0" name="a" scrolling="auto"></iframe>
+         <div id="content"></div>
         </section>
     </main>
 
 
     <script>
+        function loadPage(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const bodyContent = doc.body.innerHTML;
+                    document.getElementById('content').innerHTML = bodyContent;
+                })
+                .catch(error => console.error('Error loading page:', error));
+        }
+
+        // Load default page
+        window.onload = function() {
+            loadPage('html/Home.html');
+        };
+
+        // Handle links in loaded content
+        document.getElementById('content').addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                const href = e.target.getAttribute('href');
+                if (href && !href.startsWith('http') && href.endsWith('.html')) {
+                    e.preventDefault();
+                    const fullHref = href.startsWith('html/') ? href : 'html/' + href;
+                    loadPage(fullHref);
+                }
+            }
+        });
+
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
 
